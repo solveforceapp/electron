@@ -135,9 +135,7 @@ jobs:
             }
 
             await core.summary.write();
-      # Avoid failing when the Slack webhook secret is not defined
-      - name: Send Slack message if errors
-        if: ${{ always() && steps.audit-errors.outputs.errorsFound && github.ref == 'refs/heads/main' && secrets.CI_ERRORS_SLACK_WEBHOOK_URL != '' }}
+
         uses: slackapi/slack-github-action@b0fa283ad8fea605de13dc3f449259339835fc52 # v2.1.0
         with:
           payload: |
