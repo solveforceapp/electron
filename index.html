@@ -1,130 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
-<!DOCTYPE html>
-<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Electron | SolveForce Unified Intelligence</title>
-    <meta name="description" content="Discover the electron—its etymology, role in electronics, and significance in the age of Unified Intelligence by SolveForce.">
+    <meta name="description" content="Discover how SolveForce leverages Electron for unified intelligence solutions across telecommunications and enterprise operations.">
     <style>
+        :root {
+            --primary: #667eea;
+            --secondary: #764ba2;
+            --text-dark: #222;
+            --text-muted: #555;
+            --card-bg: rgba(255, 255, 255, 0.95);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
         body {
             margin: 0;
             font-family: 'Segoe UI', Arial, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
             min-height: 100vh;
-            color: #222;
+            color: var(--text-dark);
+            display: flex;
+            flex-direction: column;
         }
-        .overlay {
-            background: rgba(255,255,255,0.88);
-            margin: 2.5rem auto;
-            max-width: 720px;
-            border-radius: 1.7rem;
-            box-shadow: 0 8px 32px rgba(76, 68, 182, 0.13);
-            padding: 2.7rem 2.1rem 2.1rem 2.1rem;
-        }
-        h1 {
-            color: #764ba2;
-            font-size: 2.7rem;
-            margin-bottom: 0.4rem;
-            letter-spacing: 0.01em;
-        }
-        h2 {
-            color: #667eea;
-            margin-top: 2.1rem;
-        }
-        .etymology {
-            font-style: italic;
-            color: #444;
-            margin-bottom: 1.3rem;
-        }
-        .quote {
-            background: rgba(118,75,162,0.07);
-            border-left: 4px solid #764ba2;
-            margin: 1.5rem 0;
-            padding: 1rem 1.2rem;
-            font-size: 1.1rem;
-            color: #333;
-        }
-        .footer {
-            text-align: center;
-            margin-top: 3.2rem;
-            color: #888;
-            font-size: 1rem;
-        }
+
         a {
-            color: #764ba2;
+            color: var(--secondary);
             text-decoration: underline;
         }
-        @media (max-width: 600px) {
-            .overlay {
-                padding: 1.2rem 0.5rem;
-            }
-            h1 {
-                font-size: 2rem;
-            }
+
+        header {
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(8px);
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            box-shadow: 0 4px 18px rgba(0, 0, 0, 0.1);
         }
-    </style>
-</head>
-<body>
-    <div class="overlay" role="main">
-        <h1>Electron</h1>
-        <div class="etymology">Etymology: From Greek <strong>ēlektron</strong> (ἤλεκτρον), meaning “amber”—the ancient source of static electricity and the root of the word <em>electricity</em>.</div>
-        <div class="quote">“The electron is the fundamental carrier of electricity, the invisible thread weaving together the fabric of modern technology.”</div>
-        <p>
-            The <strong>electron</strong> is a subatomic particle with a negative charge, discovered in 1897 by J.J. Thomson. Its movement underpins all electrical phenomena and is the foundation of electronics, computation, and communication.
-        </p>
-        <h2>Electronics: From Amber to AI</h2>
-        <p>
-            The journey from rubbing amber in ancient Greece to today’s microprocessors is the story of the electron. Electronics harness the flow of electrons to create circuits, devices, and networks—powering everything from smartphones to satellites.
-        </p>
-        <h2>Unified Intelligence &amp; SolveForce</h2>
-        <p>
-            At SolveForce, Unified Intelligence means integrating the physical and digital worlds. By understanding the electron’s role in both nature and technology, we deliver solutions that connect, analyze, and empower organizations globally.
-        </p>
-        <h2>Why the Electron Matters</h2>
-        <p>
-            The electron is more than a particle—it’s a symbol of innovation, connectivity, and transformation. Its discovery unlocked the age of electronics, and its mastery drives the future of Unified Intelligence.
-        </p>
-        <div class="footer">
-            &copy; 2025 SolveForce | <a href="https://solveforce.com/">Unified Intelligence</a>
-        </div>
-    </div>
-</body>
-</html>
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: auto auto 1fr;
+            align-items: center;
+            gap: 1.5rem;
+            padding: 1.2rem 2rem;
+        }
+
+        .logo {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--secondary);
+            text-decoration: none;
+        }
+
+        .header-phone {
+            color: var(--primary);
+            font-weight: 600;
+            text-decoration: none;
+            justify-self: end;
+        }
+
+        nav {
+            display: flex;
+            justify-self: end;
+            gap: 1.2rem;
+        }
+
+        nav a {
+            color: var(--text-dark);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.2s ease;
+        }
+
+        nav a:hover {
+            color: var(--secondary);
+        }
+
+        main {
+            flex: 1;
+        }
+
+        .hero {
+            text-align: center;
+            color: white;
+            padding: 5rem 1.5rem 4rem;
+        }
 
         .hero h1 {
-            font-size: 3.5rem;
-            margin-bottom: 1.5rem;
+            font-size: 3rem;
+            margin-bottom: 1.2rem;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
         }
 
         .hero p {
-            font-size: 1.3rem;
-            margin-bottom: 3rem;
+            font-size: 1.2rem;
+            max-width: 780px;
+            margin: 0 auto 3rem;
             opacity: 0.95;
         }
 
         .cta-buttons {
             display: flex;
-            gap: 1.5rem;
+            gap: 1.2rem;
             justify-content: center;
             flex-wrap: wrap;
         }
 
         .btn {
-            padding: 1rem 2.5rem;
-            border-radius: 50px;
+            padding: 0.9rem 2.4rem;
+            border-radius: 999px;
             text-decoration: none;
             font-weight: 600;
-            font-size: 1.1rem;
-            transition: all 0.3s;
+            font-size: 1rem;
+            transition: all 0.3s ease;
             display: inline-block;
         }
 
         .btn-primary {
             background: white;
-            color: #667eea;
+            color: var(--primary);
         }
 
         .btn-primary:hover {
@@ -140,186 +141,170 @@
 
         .btn-secondary:hover {
             background: white;
-            color: #667eea;
+            color: var(--primary);
         }
 
         .content {
-            background: white;
-            padding: 4rem 2rem;
+            background: rgba(255, 255, 255, 0.92);
+            border-radius: 24px 24px 0 0;
+            padding: 4rem 1.5rem 3rem;
+            box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.1);
         }
 
         .container {
-            max-width: 1400px;
+            max-width: 1200px;
             margin: 0 auto;
         }
 
         h2 {
             text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 3rem;
-            color: #333;
+            font-size: 2.4rem;
+            margin-bottom: 2.5rem;
+            color: var(--secondary);
         }
 
-        .applications-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2rem;
-            margin-bottom: 4rem;
-        }
-
-        .app-card {
-            background: rgba(255, 255, 255, 0.95);
-            border-radius: 15px;
-            padding: 2rem;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-
-        .app-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-        }
-
-        .app-card h3 {
-            color: #667eea;
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .app-card p {
-            color: #555;
-            margin-bottom: 1rem;
-        }
-
-        .app-card ul {
-            list-style: none;
-        }
-
-        .app-card ul li {
-            padding: 0.4rem 0;
-            color: #555;
-            position: relative;
-            padding-left: 1.5rem;
-        }
-
-        .app-card ul li:before {
-            content: "→";
-            position: absolute;
-            left: 0;
-            color: #667eea;
-            font-weight: bold;
-        }
-
-        .features-section {
-            background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+        .overview-card {
+            background: var(--card-bg);
             border-radius: 20px;
-            padding: 3rem;
-            margin-bottom: 4rem;
+            padding: 2.5rem;
+            margin-bottom: 3rem;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
         }
 
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2rem;
+        .overview-card h2 {
+            margin-bottom: 1.2rem;
+            color: var(--primary);
+        }
+
+        .overview-card .etymology {
+            font-style: italic;
+            color: #444;
+            margin-bottom: 1.2rem;
+        }
+
+        .overview-card .quote {
+            background: rgba(118, 75, 162, 0.08);
+            border-left: 4px solid var(--secondary);
+            padding: 1rem 1.2rem;
+            font-size: 1.05rem;
+            color: #333;
+            margin: 1.5rem 0;
+        }
+
+        .overview-card .footer-note {
             margin-top: 2rem;
-        }
-
-        .feature-card {
-            background: white;
-            border-radius: 10px;
-            padding: 1.5rem;
-        }
-
-        .feature-card h3 {
-            color: #667eea;
-            margin-bottom: 0.5rem;
-        }
-
-        .feature-card p {
-            color: #555;
             font-size: 0.95rem;
+            color: var(--text-muted);
+            text-align: right;
         }
 
-        .tech-stack {
-            margin-bottom: 4rem;
-        }
-
-        .tech-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-
-        .tech-card {
-            background: rgba(255, 255, 255, 0.95);
-            border-radius: 15px;
-            padding: 2rem;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-        }
-
-        .tech-card h3 {
-            color: #667eea;
-            margin-bottom: 1rem;
-        }
-
-        .tech-card p {
-            color: #555;
-            margin-bottom: 1rem;
-        }
-
-        .code-block {
-            background: #f5f5f5;
-            border-left: 4px solid #667eea;
-            padding: 1rem;
-            margin: 1rem 0;
-            border-radius: 5px;
-            font-family: 'Courier New', monospace;
-            font-size: 0.9rem;
-            overflow-x: auto;
-        }
-
-        .use-cases {
-            margin-bottom: 4rem;
-        }
-
+        .applications-grid,
+        .features-grid,
         .use-cases-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 2rem;
-            margin-top: 2rem;
         }
 
-        .use-case-card {
-            background: rgba(255, 255, 255, 0.95);
-            border-radius: 15px;
+        .app-card,
+        .feature-card,
+        .use-case-card,
+        .tech-card {
+            background: var(--card-bg);
+            border-radius: 18px;
             padding: 2rem;
             box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
-        .use-case-card h3 {
-            color: #667eea;
-            margin-bottom: 1rem;
+        .app-card:hover,
+        .feature-card:hover,
+        .use-case-card:hover,
+        .tech-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 18px 36px rgba(0, 0, 0, 0.12);
         }
 
-        .use-case-card p {
-            color: #555;
+        .app-card h3,
+        .feature-card h3,
+        .use-case-card h3,
+        .tech-card h3 {
+            color: var(--primary);
+            font-size: 1.4rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .app-card p,
+        .feature-card p,
+        .use-case-card p,
+        .tech-card p {
+            color: var(--text-muted);
+        }
+
+        .app-card ul,
+        .tech-card ul {
+            list-style: none;
+            padding-left: 0;
+            margin: 1rem 0 0;
+        }
+
+        .app-card ul li,
+        .tech-card ul li {
+            padding: 0.4rem 0 0.4rem 1.5rem;
+            position: relative;
+            color: var(--text-muted);
+        }
+
+        .app-card ul li::before,
+        .tech-card ul li::before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+            font-weight: 700;
+        }
+
+        .features-section {
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.12) 0%, rgba(118, 75, 162, 0.12) 100%);
+            border-radius: 24px;
+            padding: 3rem 2.5rem;
+            margin: 3rem 0;
+        }
+
+        .tech-stack {
+            margin: 3rem 0;
+        }
+
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .code-block {
+            background: #f5f5f5;
+            border-left: 4px solid var(--primary);
+            padding: 1rem 1.2rem;
+            border-radius: 8px;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 0.95rem;
+            margin: 1rem 0;
         }
 
         footer {
             background: rgba(255, 255, 255, 0.95);
-            padding: 3rem 2rem;
+            padding: 3rem 1.5rem;
             text-align: center;
             margin-top: auto;
         }
 
         footer h3 {
-            color: #667eea;
+            color: var(--primary);
             margin-bottom: 1rem;
         }
 
         footer p {
-            color: #555;
+            color: var(--text-muted);
             margin-bottom: 1.5rem;
         }
 
@@ -332,44 +317,55 @@
         }
 
         .contact-info a {
-            color: #667eea;
+            color: var(--primary);
             text-decoration: none;
             font-weight: 600;
         }
 
         .contact-info a:hover {
-            color: #764ba2;
+            color: var(--secondary);
         }
 
-        @media (max-width: 968px) {
+        @media (max-width: 1100px) {
             .applications-grid,
             .features-grid,
-            .use-cases-grid {
+            .use-cases-grid,
+            .tech-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
+        }
 
+        @media (max-width: 768px) {
+            .header-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            nav {
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+
+            .hero h1 {
+                font-size: 2.4rem;
+            }
+
+            .applications-grid,
+            .features-grid,
+            .use-cases-grid,
             .tech-grid {
                 grid-template-columns: 1fr;
             }
         }
 
-        @media (max-width: 768px) {
+        @media (max-width: 520px) {
             .hero h1 {
-                font-size: 2.5rem;
+                font-size: 2rem;
             }
 
-            .applications-grid,
-            .features-grid,
-            .use-cases-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .header-content {
-                grid-template-columns: 1fr;
-            }
-
-            nav {
-                display: none;
+            .btn {
+                width: 100%;
+                text-align: center;
             }
         }
     </style>
@@ -377,255 +373,220 @@
 <body>
     <header>
         <div class="header-content">
-            <a href="index.html" class="logo">SolveForce Electron</a>
+            <a href="#top" class="logo">SolveForce Electron</a>
             <a href="tel:+18887658301" class="header-phone">(888) 765-8301</a>
             <nav>
                 <a href="#applications">Applications</a>
-                <a href="#features">Features</a>
                 <a href="#technology">Technology</a>
+                <a href="#use-cases">Use Cases</a>
                 <a href="#contact">Contact</a>
                 <a href="https://portal.solveforce.com">Portal</a>
             </nav>
         </div>
     </header>
 
-    <section class="hero">
-        <h1>Cross-Platform Telecommunications Applications</h1>
-        <p>Build powerful desktop applications for network management, monitoring, and enterprise operations with Electron</p>
-        <div class="cta-buttons">
-            <a href="tel:+18887658301" class="btn btn-primary">Request Demo</a>
-            <a href="#applications" class="btn btn-secondary">View Applications</a>
-            <a href="https://github.com/electron/electron" class="btn btn-secondary">Electron GitHub</a>
-        </div>
-    </section>
-
-    <section class="content">
-        <div class="container">
-            <h2 id="applications">Telecommunications Applications</h2>
-            <div class="applications-grid">
-                <div class="app-card">
-                    <h3>Network Operations Center (NOC)</h3>
-                    <p>Real-time network monitoring and management dashboard for telecommunications infrastructure</p>
-                    <ul>
-                        <li>Live topology visualization</li>
-                        <li>Performance metrics tracking</li>
-                        <li>Alert management system</li>
-                        <li>Multi-site monitoring</li>
-                        <li>Incident response tools</li>
-                    </ul>
-                </div>
-
-                <div class="app-card">
-                    <h3>Fiber Network Planner</h3>
-                    <p>Design and plan fiber optic deployments with GIS integration and route optimization</p>
-                    <ul>
-                        <li>Route planning tools</li>
-                        <li>Cost estimation</li>
-                        <li>Permit tracking</li>
-                        <li>Construction management</li>
-                        <li>Asset inventory</li>
-                    </ul>
-                </div>
-
-                <div class="app-card">
-                    <h3>VoIP Management Console</h3>
-                    <p>Administer enterprise voice systems, call routing, and unified communications</p>
-                    <ul>
-                        <li>Extension management</li>
-                        <li>Call analytics</li>
-                        <li>Queue monitoring</li>
-                        <li>Voicemail administration</li>
-                        <li>SIP trunk configuration</li>
-                    </ul>
-                </div>
-
-                <div class="app-card">
-                    <h3>Bandwidth Monitoring Tool</h3>
-                    <p>Track and analyze network bandwidth utilization across enterprise circuits</p>
-                    <ul>
-                        <li>Real-time usage graphs</li>
-                        <li>Historical trending</li>
-                        <li>Capacity planning</li>
-                        <li>Threshold alerts</li>
-                        <li>Export reporting</li>
-                    </ul>
-                </div>
-
-                <div class="app-card">
-                    <h3>Security Operations Dashboard</h3>
-                    <p>Monitor cybersecurity events, threats, and compliance across telecommunications infrastructure</p>
-                    <ul>
-                        <li>SIEM integration</li>
-                        <li>Threat visualization</li>
-                        <li>Incident workflow</li>
-                        <li>Compliance reporting</li>
-                        <li>Forensic analysis</li>
-                    </ul>
-                </div>
-
-                <div class="app-card">
-                    <h3>Service Provisioning Portal</h3>
-                    <p>Automate telecom service activation, configuration, and billing integration</p>
-                    <ul>
-                        <li>Order processing</li>
-                        <li>Service activation</li>
-                        <li>Configuration automation</li>
-                        <li>Billing integration</li>
-                        <li>Customer notifications</li>
-                    </ul>
-                </div>
+    <main id="top">
+        <section class="hero">
+            <h1>Cross-Platform Telecommunications Applications</h1>
+            <p>Build powerful network management, monitoring, and enterprise operations software with Electron and SolveForce's unified intelligence services.</p>
+            <div class="cta-buttons">
+                <a href="tel:+18887658301" class="btn btn-primary">Request Demo</a>
+                <a href="#applications" class="btn btn-secondary">View Applications</a>
+                <a href="https://github.com/electron/electron" class="btn btn-secondary">Electron GitHub</a>
             </div>
+        </section>
 
-            <div class="features-section" id="features">
-                <h2>Why Electron for Telecommunications?</h2>
-                <div class="features-grid">
-                    <div class="feature-card">
-                        <h3>Cross-Platform Deployment</h3>
-                        <p>Build once, deploy on Windows, macOS, and Linux for consistent operations across all network operations centers</p>
-                    </div>
-                    <div class="feature-card">
-                        <h3>Native Performance</h3>
-                        <p>Access system-level APIs for real-time network monitoring, packet capture, and hardware integration</p>
-                    </div>
-                    <div class="feature-card">
-                        <h3>Web Technologies</h3>
-                        <p>Leverage HTML, CSS, and JavaScript with frameworks like React or Vue for rapid development</p>
-                    </div>
-                    <div class="feature-card">
-                        <h3>Auto-Update System</h3>
-                        <p>Deploy security patches and feature updates automatically to all NOC workstations</p>
-                    </div>
-                    <div class="feature-card">
-                        <h3>Offline Capability</h3>
-                        <p>Continue operations during network outages with local data caching and synchronization</p>
-                    </div>
-                    <div class="feature-card">
-                        <h3>Native Integration</h3>
-                        <p>Integrate with system notifications, menu bars, and desktop features for seamless workflows</p>
-                    </div>
-                </div>
-            </div>
+        <section class="content">
+            <div class="container">
+                <article class="overview-card">
+                    <h2>Electron</h2>
+                    <div class="etymology">Etymology: From Greek <strong>ēlektron</strong> (ἤλεκτρον), meaning “amber”—the ancient source of static electricity and the root of the word <em>electricity</em>.</div>
+                    <div class="quote">“The electron is the fundamental carrier of electricity, the invisible thread weaving together the fabric of modern technology.”</div>
+                    <p>The <strong>electron</strong> is a subatomic particle with a negative charge, discovered in 1897 by J.J. Thomson. Its movement underpins all electrical phenomena and is the foundation of electronics, computation, and communication.</p>
+                    <h3>Electronics: From Amber to AI</h3>
+                    <p>The journey from rubbing amber in ancient Greece to today’s microprocessors is the story of the electron. Electronics harness the flow of electrons to create circuits, devices, and networks—powering everything from smartphones to satellites.</p>
+                    <h3>Unified Intelligence &amp; SolveForce</h3>
+                    <p>At SolveForce, Unified Intelligence means integrating the physical and digital worlds. By understanding the electron’s role in both nature and technology, we deliver solutions that connect, analyze, and empower organizations globally.</p>
+                    <h3>Why the Electron Matters</h3>
+                    <p>The electron is more than a particle—it’s a symbol of innovation, connectivity, and transformation. Its discovery unlocked the age of electronics, and its mastery drives the future of Unified Intelligence.</p>
+                    <p class="footer-note">&copy; 2025 SolveForce | <a href="https://solveforce.com/">Unified Intelligence</a></p>
+                </article>
 
-            <div class="tech-stack" id="technology">
-                <h2>Technology Stack</h2>
-                <div class="tech-grid">
-                    <div class="tech-card">
-                        <h3>Electron Core</h3>
-                        <p>Cross-platform desktop application framework combining Chromium rendering engine and Node.js runtime</p>
-                        <div class="code-block">
-                            npm install electron --save-dev<br>
-                            npm install electron-builder --save-dev
+                <section>
+                    <h2 id="applications">Telecommunications Applications</h2>
+                    <div class="applications-grid">
+                        <div class="app-card">
+                            <h3>Network Operations Center (NOC)</h3>
+                            <p>Real-time network monitoring and management dashboard for telecommunications infrastructure.</p>
+                            <ul>
+                                <li>Live topology visualization</li>
+                                <li>Performance metrics tracking</li>
+                                <li>Alert management system</li>
+                                <li>Multi-site monitoring</li>
+                                <li>Incident response tools</li>
+                            </ul>
                         </div>
-                        <p>Build telecommunications applications with full access to Node.js modules for network operations, file system management, and system integration.</p>
-                    </div>
-
-                    <div class="tech-card">
-                        <h3>Frontend Frameworks</h3>
-                        <p>Leverage modern web frameworks for building responsive telecommunications dashboards</p>
-                        <div class="code-block">
-                            React + TypeScript + Material-UI<br>
-                            Vue.js + Vuetify + Chart.js<br>
-                            D3.js for network topology visualization
+                        <div class="app-card">
+                            <h3>Fiber Network Planner</h3>
+                            <p>Design and plan fiber optic deployments with GIS integration and route optimization.</p>
+                            <ul>
+                                <li>Route planning tools</li>
+                                <li>Cost estimation</li>
+                                <li>Permit tracking</li>
+                                <li>Construction management</li>
+                                <li>Asset inventory</li>
+                            </ul>
                         </div>
-                        <p>Create interactive network diagrams, real-time monitoring charts, and intuitive management interfaces.</p>
-                    </div>
-
-                    <div class="tech-card">
-                        <h3>Backend Integration</h3>
-                        <p>Connect to telecommunications infrastructure through APIs and network protocols</p>
-                        <div class="code-block">
-                            SNMP monitoring<br>
-                            REST API integration<br>
-                            WebSocket real-time updates<br>
-                            SSH/Telnet device access
+                        <div class="app-card">
+                            <h3>VoIP Management Console</h3>
+                            <p>Administer enterprise voice systems, call routing, and unified communications.</p>
+                            <ul>
+                                <li>Extension management</li>
+                                <li>Call analytics</li>
+                                <li>Queue monitoring</li>
+                                <li>Voicemail administration</li>
+                                <li>SIP trunk configuration</li>
+                            </ul>
                         </div>
-                        <p>Query network devices, retrieve performance metrics, and automate configuration management.</p>
-                    </div>
-
-                    <div class="tech-card">
-                        <h3>Data Visualization</h3>
-                        <p>Display network performance, topology, and analytics with powerful charting libraries</p>
-                        <div class="code-block">
-                            Chart.js - Performance metrics<br>
-                            D3.js - Network topology maps<br>
-                            Recharts - Analytics dashboards<br>
-                            Leaflet - Geographic fiber routes
+                        <div class="app-card">
+                            <h3>Network Compliance Auditor</h3>
+                            <p>Automate policy enforcement, configuration baselines, and audit readiness.</p>
+                            <ul>
+                                <li>Security configuration scans</li>
+                                <li>Remediation workflows</li>
+                                <li>Policy versioning</li>
+                                <li>Compliance reporting</li>
+                                <li>Role-based access</li>
+                            </ul>
                         </div>
-                        <p>Transform telecommunications data into actionable insights with interactive visualizations.</p>
+                        <div class="app-card">
+                            <h3>Edge Device Manager</h3>
+                            <p>Provision and manage CPEs, routers, and IoT gateways across distributed networks.</p>
+                            <ul>
+                                <li>Zero-touch provisioning</li>
+                                <li>Firmware orchestration</li>
+                                <li>Configuration templates</li>
+                                <li>Health monitoring</li>
+                                <li>Asset lifecycle tracking</li>
+                            </ul>
+                        </div>
+                        <div class="app-card">
+                            <h3>Service Assurance Suite</h3>
+                            <p>Monitor SLAs, resolve incidents, and keep customers informed in real time.</p>
+                            <ul>
+                                <li>Customer-impact dashboards</li>
+                                <li>Automated ticketing</li>
+                                <li>SMS and email alerts</li>
+                                <li>Root-cause analytics</li>
+                                <li>Executive summaries</li>
+                            </ul>
+                        </div>
                     </div>
-                </div>
+                </section>
+
+                <section class="tech-stack">
+                    <h2 id="technology">Technology Stack</h2>
+                    <div class="tech-grid">
+                        <div class="tech-card">
+                            <h3>Electron Framework</h3>
+                            <p>Deploy cross-platform desktop applications with a single JavaScript/TypeScript codebase.</p>
+                            <div class="code-block">
+                                Electron main &amp; renderer process<br>
+                                Auto-updates &amp; code signing<br>
+                                Native module integration
+                            </div>
+                            <p>Ship modern user experiences while leveraging existing web development skills.</p>
+                        </div>
+                        <div class="tech-card">
+                            <h3>Front-End Frameworks</h3>
+                            <p>Create responsive interfaces with modern UI libraries tailored to telecom workflows.</p>
+                            <div class="code-block">
+                                React + TypeScript + Material-UI<br>
+                                Vue.js + Vuetify + Chart.js<br>
+                                D3.js for topology visualization
+                            </div>
+                            <p>Build interactive network diagrams, real-time monitoring, and intuitive dashboards.</p>
+                        </div>
+                        <div class="tech-card">
+                            <h3>Backend Integration</h3>
+                            <p>Connect to telecommunications infrastructure through APIs and network protocols.</p>
+                            <div class="code-block">
+                                SNMP monitoring<br>
+                                REST &amp; GraphQL APIs<br>
+                                WebSocket event streams<br>
+                                SSH/Telnet automation
+                            </div>
+                            <p>Query network devices, retrieve performance metrics, and automate configuration management.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="use-cases">
+                    <h2 id="use-cases">Enterprise Use Cases</h2>
+                    <div class="use-cases-grid">
+                        <div class="use-case-card">
+                            <h3>Multi-Site NOC Operations</h3>
+                            <p>Deploy consistent monitoring applications across multiple network operations centers with centralized updates and standardized workflows.</p>
+                        </div>
+                        <div class="use-case-card">
+                            <h3>Field Service Technician Tools</h3>
+                            <p>Equip technicians with offline-capable applications for fiber testing, circuit provisioning, and equipment configuration.</p>
+                        </div>
+                        <div class="use-case-card">
+                            <h3>Network Engineering Workstations</h3>
+                            <p>Provide engineers with integrated toolsets for network design, capacity planning, traffic analysis, and documentation.</p>
+                        </div>
+                        <div class="use-case-card">
+                            <h3>Security Operations Centers</h3>
+                            <p>Unify cybersecurity monitoring across telecommunications infrastructure with SIEM integration and real-time threat visualization.</p>
+                        </div>
+                        <div class="use-case-card">
+                            <h3>Customer Service Portals</h3>
+                            <p>Enable support teams with dashboards showing customer circuits, service status, trouble tickets, and billing information.</p>
+                        </div>
+                        <div class="use-case-card">
+                            <h3>Executive Dashboards</h3>
+                            <p>Present network health, service metrics, and business KPIs in executive-friendly visualizations with drill-down capabilities.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="features-section">
+                    <h2>Development Services</h2>
+                    <div class="features-grid">
+                        <div class="feature-card">
+                            <h3>Custom Application Development</h3>
+                            <p>Build tailored Electron applications for your telecommunications infrastructure and workflows.</p>
+                        </div>
+                        <div class="feature-card">
+                            <h3>Integration Services</h3>
+                            <p>Connect applications with existing network management systems, OSS/BSS platforms, and monitoring tools.</p>
+                        </div>
+                        <div class="feature-card">
+                            <h3>Migration &amp; Modernization</h3>
+                            <p>Convert legacy desktop applications to modern Electron-based solutions with enhanced features.</p>
+                        </div>
+                        <div class="feature-card">
+                            <h3>Performance Optimization</h3>
+                            <p>Optimize application performance for handling large-scale network data and real-time updates.</p>
+                        </div>
+                        <div class="feature-card">
+                            <h3>Security Hardening</h3>
+                            <p>Implement security best practices, code signing, and vulnerability assessments for enterprise deployment.</p>
+                        </div>
+                        <div class="feature-card">
+                            <h3>Ongoing Support</h3>
+                            <p>Provide maintenance, updates, and technical support for production telecommunications applications.</p>
+                        </div>
+                    </div>
+                </section>
             </div>
-
-            <div class="use-cases">
-                <h2>Enterprise Use Cases</h2>
-                <div class="use-cases-grid">
-                    <div class="use-case-card">
-                        <h3>Multi-Site NOC Operations</h3>
-                        <p>Deploy consistent monitoring applications across multiple network operations centers with centralized update management and standardized workflows.</p>
-                    </div>
-
-                    <div class="use-case-card">
-                        <h3>Field Service Technician Tools</h3>
-                        <p>Equip technicians with offline-capable applications for fiber testing, circuit provisioning, and customer premises equipment configuration.</p>
-                    </div>
-
-                    <div class="use-case-card">
-                        <h3>Network Engineering Workstations</h3>
-                        <p>Provide engineers with integrated toolsets for network design, capacity planning, traffic analysis, and infrastructure documentation.</p>
-                    </div>
-
-                    <div class="use-case-card">
-                        <h3>Security Operations Centers</h3>
-                        <p>Unify cybersecurity monitoring across telecommunications infrastructure with SIEM integration and real-time threat visualization.</p>
-                    </div>
-
-                    <div class="use-case-card">
-                        <h3>Customer Service Portals</h3>
-                        <p>Enable support teams with comprehensive dashboards showing customer circuits, service status, trouble tickets, and billing information.</p>
-                    </div>
-
-                    <div class="use-case-card">
-                        <h3>Executive Dashboards</h3>
-                        <p>Present high-level network health, service metrics, and business KPIs in executive-friendly visualizations with drill-down capabilities.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="features-section">
-                <h2>Development Services</h2>
-                <div class="features-grid">
-                    <div class="feature-card">
-                        <h3>Custom Application Development</h3>
-                        <p>Build tailored Electron applications for your specific telecommunications infrastructure and workflows</p>
-                    </div>
-                    <div class="feature-card">
-                        <h3>Integration Services</h3>
-                        <p>Connect applications with existing network management systems, OSS/BSS platforms, and monitoring tools</p>
-                    </div>
-                    <div class="feature-card">
-                        <h3>Migration & Modernization</h3>
-                        <p>Convert legacy desktop applications to modern Electron-based solutions with enhanced features</p>
-                    </div>
-                    <div class="feature-card">
-                        <h3>Performance Optimization</h3>
-                        <p>Optimize application performance for handling large-scale network data and real-time updates</p>
-                    </div>
-                    <div class="feature-card">
-                        <h3>Security Hardening</h3>
-                        <p>Implement security best practices, code signing, and vulnerability assessments for enterprise deployment</p>
-                    </div>
-                    <div class="feature-card">
-                        <h3>Ongoing Support</h3>
-                        <p>Provide maintenance, updates, and technical support for production telecommunications applications</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <footer id="contact">
         <h3>Build Your Telecommunications Application</h3>
-        <p>Contact our development team to discuss custom Electron applications for your network operations</p>
+        <p>Contact our development team to discuss custom Electron applications for your network operations.</p>
         <div class="contact-info">
             <a href="tel:+18887658301">(888) 765-8301</a>
             <a href="mailto:development@solveforce.com">development@solveforce.com</a>
